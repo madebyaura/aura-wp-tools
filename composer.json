@@ -1,0 +1,19 @@
+{
+	"name": "madebyaura/aura-wp-tools",
+	"version": "1.0.0",
+	"description": "",
+	"license": "GPL-2.0",
+	"support": {
+		"email": "info@madebyaura.com"
+	},
+	"autoload": {
+		"psr-4": {
+			"MadeByAura\\WPTools\\": "src"
+		}
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+		"wp-coding-standards/wpcs": "^2.0",
+		"phpcompatibility/php-compatibility": "^9.1"
+	}
+}
