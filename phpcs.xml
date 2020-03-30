@@ -33,7 +33,12 @@
 		<exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
 	</rule>
+
+	<!-- Require short array syntax -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
 	<!-- Verify that the text_domain is set to the desired text-domain.
 		 Multiple valid text domains can be provided as a comma-delimited list. -->
@@ -51,23 +56,16 @@
 		</properties>
 	</rule>
 
-	<!-- Allow forward slash in hook names. -->
-	<rule ref="WordPress.NamingConventions.ValidHookName">
-		<properties>
-			<property name="additionalWordDelimiters" value="/-" />
-		</properties>
-	</rule>
-
 	<!-- Verify that no WP functions are used which are deprecated or have been removed.
 		 The minimum version set here should be in line with the minimum WP version
 		 as set in the "Requires at least" tag in the readme.txt file. -->
 	<rule ref="WordPress.WP.DeprecatedFunctions">
 		<properties>
-			<property name="minimum_supported_version" value="4.6" />
+			<property name="minimum_supported_version" value="5.2" />
 		</properties>
 	</rule>
 
 	<!-- Include sniffs for PHP cross-version compatibility. -->
-	<config name="testVersion" value="5.4"/>
+	<config name="testVersion" value="5.6"/>
 	<rule ref="PHPCompatibility"/>
 </ruleset>

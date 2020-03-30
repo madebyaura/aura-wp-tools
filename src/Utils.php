@@ -5,7 +5,7 @@
  * @package MadeByAura\WPTools
  * @author  MadeByAura.com
  * @since   1.0.0
- * @version 1.0.0
+ * @version 2.0.0
  */
 
 namespace MadeByAura\WPTools;
@@ -17,25 +17,25 @@ defined( 'ABSPATH' ) || die();
  */
 class Utils {
 	/**
-	 * Replace spaces and underscores in a string with dashes.
+	 * Remove invalid characters from a string, and replace underscores,
+	 * whitespace, forward slash, and back slash characters with dashes.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $string String that needs to dashified.
+	 * @param  string $string - String that needs to dashified.
 	 * @return string $string
 	 */
 	public static function dashify( $string ) {
-		// Lower case everything.
-		$string = strtolower( $string );
+		// Remove whitespace from the front and end, and lowercase all characters.
+		$string = strtolower( trim( $string ) );
 
-		// Make alphanumeric (removes all other characters).
-		$string = preg_replace( '/[^a-z0-9_\s-]/', '', $string );
+		// Remove all characters other than alphabets, numbers, dash, underscore,
+		// whitespace, forward slash, and back slash.
+		$string = preg_replace( '/[^a-z0-9-_\s\/\\\]/', '', $string );
 
-		// Clean up multiple dashes, underscores or whitespaces.
-		$string = preg_replace( '/[\s\-_]+/', ' ', $string );
-
-		// Convert whitespaces and underscore to dash.
-		$string = preg_replace( '/[\s_]/', '-', $string );
+		// Replace dash, underscore, whitespace, forward slash, and back slash
+		// characters with dashes.
+		$string = preg_replace( '/[-_\s\/\\\]+/', '-', $string );
 
 		return $string;
 	}
@@ -45,7 +45,7 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  array $array Array to be dashified.
+	 * @param  array $array - Array to be dashified.
 	 * @return array
 	 */
 	public static function dashify_array( $array ) {
@@ -53,27 +53,39 @@ class Utils {
 	}
 
 	/**
-	 * Replace spaces and dashes in a string with underscores.
+	 * Remove invalid characters from a string, and replace dash, whitespace,
+	 * forward slash, and back slash characters with underscores.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $string String that needs to be underscorified.
+	 * @param  string $string - String that needs to be underscorified.
 	 * @return string $string
 	 */
 	public static function underscorify( $string ) {
-		// Lower case everything.
-		$string = strtolower( $string );
+		// Remove whitespace from the front and end, and lowercase all characters.
+		$string = strtolower( trim( $string ) );
 
-		// Make alphanumeric (removes all other characters).
-		$string = preg_replace( '/[^a-z0-9_\s-]/', '', $string );
+		// Remove all characters other than alphabets, numbers, dash, underscore,
+		// whitespace, forward slash, and back slash.
+		$string = preg_replace( '/[^a-z0-9-_\s\/\\\]/', '', $string );
 
-		// Clean up multiple dashes, underscores or whitespaces.
-		$string = preg_replace( '/[\s\-_]+/', ' ', $string );
-
-		// Convert whitespaces and underscore to dash.
-		$string = preg_replace( '/[\s-]/', '_', $string );
+		// Replace dash, underscore, whitespace, forward slash, and back slash
+		// characters with underscores.
+		$string = preg_replace( '/[-_\s\/\\\]+/', '_', $string );
 
 		return $string;
+	}
+
+	/**
+	 * Run all elements of an array through underscorify().
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  array $array - Array to be underscorify.
+	 * @return array
+	 */
+	public static function underscorify_array( $array ) {
+		return array_map( __CLASS__ . '::underscorify', $array );
 	}
 
 	/**
@@ -81,7 +93,7 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $file_path File path.
+	 * @param  string $file_path - File path.
 	 * @return string
 	 */
 	public static function get_file_content( $file_path ) {
@@ -101,8 +113,8 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $string String.
-	 * @param  string $prefix Prefix.
+	 * @param  string $string - String.
+	 * @param  string $prefix - Prefix to be removed.
 	 * @return string
 	 */
 	public static function remove_prefix( $string, $prefix ) {
@@ -114,8 +126,8 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  array  $array  Array.
-	 * @param  string $prefix Prefix.
+	 * @param  array  $array  - Associative array.
+	 * @param  string $prefix - Prefix to be removed.
 	 * @return array
 	 */
 	public static function remove_array_key_prefix( $array, $prefix ) {
@@ -133,7 +145,7 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $plugin Base plugin path.
+	 * @param  string $plugin - Base plugin path.
 	 * @return bool
 	 */
 	public static function is_plugin_active( $plugin ) {
@@ -149,8 +161,8 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  integer $image_id   Image ID.
-	 * @param  string  $image_size Image size.
+	 * @param  integer $image_id   - Image ID.
+	 * @param  string  $image_size - Image size.
 	 * @return integer|string
 	 */
 	public static function get_image_url( $image_id, $image_size = 'thumbnail' ) {
@@ -166,7 +178,7 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  array $args Arguments.
+	 * @param  array $args - Query arguments.
 	 * @return array
 	 */
 	public static function parse_query_args( $args ) {
@@ -250,8 +262,8 @@ class Utils {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $class_name Widget class name.
-	 * @return string $class_name CSS class name.
+	 * @param  string $class_name - Widget class name.
+	 * @return string $class_name - CSS class name.
 	 */
 	public static function get_widget_css_class( $class_name ) {
 		// Early exit if class name is empty.
@@ -276,8 +288,8 @@ class Utils {
 	 *
 	 * @link https://docs.woocommerce.com/document/conditional-tags/
 	 *
-	 * @param  string|array $page Page or pages.
-	 * @param  string|array $args Page arguments.
+	 * @param  string|array $page - Page or pages.
+	 * @param  string|array $args - Page arguments.
 	 * @return bool
 	 */
 	public static function is_wc_page( $page = '', $args = '' ) {

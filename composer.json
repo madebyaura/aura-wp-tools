@@ -1,6 +1,6 @@
 {
 	"name": "madebyaura/aura-wp-tools",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "",
 	"license": "GPL-2.0",
 	"support": {
@@ -12,8 +12,8 @@
 		}
 	},
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-		"wp-coding-standards/wpcs": "^2.0",
-		"phpcompatibility/php-compatibility": "^9.1"
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+		"wp-coding-standards/wpcs": "^2.2",
+		"phpcompatibility/php-compatibility": "^9.3"
 	}
 }
