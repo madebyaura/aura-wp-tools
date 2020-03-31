@@ -5,7 +5,7 @@
  * @package MadeByAura\WPTools
  * @author  MadeByAura.com
  * @since   2.1.0
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 namespace MadeByAura\WPTools;
@@ -55,10 +55,6 @@ class Markup {
 				echo sprintf( '%s="%s" ', tag_escape( $key ), call_user_func( self::get_attr_esc_function( $key ), $value ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
-
-		$output = trim( $output );
-
-		return $output;
 	}
 
 	/**
