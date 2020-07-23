@@ -1,3 +1,7 @@
+## 2.1.2
+
+- Use `preg_replace` to escape attribute names.
+
 ## 2.1.1
 
 - Fix bug in `echo_attrs` method of `Markup` class.
