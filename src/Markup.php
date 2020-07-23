@@ -50,9 +50,11 @@ class Markup {
 			}
 
 			if ( true === $value ) {
-				echo tag_escape( $key ) . ' ';
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo self::esc_attr_name( $key ) . ' ';
 			} else {
-				echo sprintf( '%s="%s" ', tag_escape( $key ), call_user_func( self::get_attr_esc_function( $key ), $value ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo sprintf( '%s="%s" ', self::esc_attr_name( $key ), call_user_func( self::get_attr_esc_function( $key ), $value ) );
 			}
 		}
 	}
@@ -91,6 +93,17 @@ class Markup {
 		}
 
 		return $output;
+	}
+
+	/**
+	 * Escape name of the attribute.
+	 *
+	 * @since 2.1.0
+	 *
+	 * @param string $attribute - Tag attribute.
+	 */
+	public static function esc_attr_name( $attribute ) {
+		return preg_replace( '/[^a-zA-Z0-9-]/', '', $attribute );
 	}
 
 	/**
