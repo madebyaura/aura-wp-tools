@@ -1,6 +1,7 @@
 ## 2.2.0 (TBD)
 
 - Add `get_classes_array` and `merge_classes` methods to `Markup` class.
+- Use `array_replace_recursive` instead of custom `merge_arrays`.
 
 ## 2.1.2
 

@@ -182,14 +182,15 @@ class Utils {
 	 * @return array
 	 */
 	public static function parse_query_args( $args ) {
-		$args = self::merge_arrays( $args, [
+		// Merge $args with defaults.
+		$args = array_replace_recursive( [
 			'query_type'       => 'latest',
 			'taxonomy'         => 'category',
 			'term_ids'         => '',
 			'post_ids'         => '',
 			'post_exclude_ids' => '',
 			'posts_per_page'   => 10,
-		] );
+		], $args );
 
 		$query_args = [];
 
