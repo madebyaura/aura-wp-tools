@@ -1,3 +1,7 @@
+## 2.2.0 (TBD)
+
+- Add `get_classes_array` and `merge_classes` methods to `Markup` class.
+
 ## 2.1.2
 
 - Use `preg_replace` to escape attribute names.

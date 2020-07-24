@@ -159,6 +159,43 @@ class Markup {
 	}
 
 	/**
+	 * Get an array from a space separated string of CSS classes.
+	 *
+	 * @since 2.2.0
+	 *
+	 * @param array|string $classes - String or array of CSS classes.
+	 * @return array
+	 */
+	public static function get_classes_array( $classes ) {
+		// If a string is provided, convert it into an array.
+		if ( is_string( $classes ) ) {
+			$classes = explode( ' ', $classes );
+		}
+
+		return $classes;
+	}
+
+	/**
+	 * Merge classes.
+	 *
+	 * @since 2.2.0
+	 *
+	 * @param array|string $classes_1 - String or array of CSS classes.
+	 * @param array|string $classes_2 - String or array of CSS classes.
+	 * @return array
+	 */
+	public static function merge_classes( $classes_1, $classes_2 ) {
+		// Get array of classes.
+		$classes_1 = self::get_classes_array( $classes_1 );
+		$classes_2 = self::get_classes_array( $classes_2 );
+
+		// Merge arrays of classes.
+		$classes = array_merge( $classes_1, $classes_2 );
+
+		return $classes;
+	}
+
+	/**
 	 * Print class attribute value.
 	 *
 	 * @since 2.1.0
