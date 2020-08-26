@@ -4,8 +4,6 @@
  *
  * @package MadeByAura\WPTools
  * @author  MadeByAura.com
- * @since   1.0.0
- * @version 2.0.0
  */
 
 namespace MadeByAura\WPTools;
@@ -19,8 +17,6 @@ class Utils {
 	/**
 	 * Remove invalid characters from a string, and replace underscores,
 	 * whitespace, forward slash, and back slash characters with dashes.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  string $string - String that needs to dashified.
 	 * @return string $string
@@ -43,8 +39,6 @@ class Utils {
 	/**
 	 * Run all elements of an array through dashify().
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param  array $array - Array to be dashified.
 	 * @return array
 	 */
@@ -55,8 +49,6 @@ class Utils {
 	/**
 	 * Remove invalid characters from a string, and replace dash, whitespace,
 	 * forward slash, and back slash characters with underscores.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  string $string - String that needs to be underscorified.
 	 * @return string $string
@@ -79,8 +71,6 @@ class Utils {
 	/**
 	 * Run all elements of an array through underscorify().
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param  array $array - Array to be underscorify.
 	 * @return array
 	 */
@@ -90,8 +80,6 @@ class Utils {
 
 	/**
 	 * Get file content.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  string $file_path - File path.
 	 * @return string
@@ -111,8 +99,6 @@ class Utils {
 	/**
 	 * Remove prefix from a string.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param  string $string - String.
 	 * @param  string $prefix - Prefix to be removed.
 	 * @return string
@@ -123,8 +109,6 @@ class Utils {
 
 	/**
 	 * Remove prefix from a array keys.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  array  $array  - Associative array.
 	 * @param  string $prefix - Prefix to be removed.
@@ -143,8 +127,6 @@ class Utils {
 	/**
 	 * Check if a plugin is active.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @param  string $plugin - Base plugin path.
 	 * @return bool
 	 */
@@ -158,8 +140,6 @@ class Utils {
 
 	/**
 	 * Get URL of the image.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  integer $image_id   - Image ID.
 	 * @param  string  $image_size - Image size.
@@ -175,8 +155,6 @@ class Utils {
 
 	/**
 	 * Process post query arguments.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  array $args - Query arguments.
 	 * @return array
@@ -229,8 +207,6 @@ class Utils {
 	/**
 	 * Get URL of the Posts Page.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @return string
 	 */
 	public static function get_posts_archive_url() {
@@ -243,8 +219,6 @@ class Utils {
 
 	/**
 	 * Get Title of the Posts Page.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @return string
 	 */
@@ -260,8 +234,6 @@ class Utils {
 
 	/**
 	 * Get widget's css class name using it PHP class name.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @param  string $class_name - Widget class name.
 	 * @return string $class_name - CSS class name.

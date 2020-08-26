@@ -4,8 +4,6 @@
  *
  * @package MadeByAura\WPTools
  * @author  MadeByAura.com
- * @since   2.0.0
- * @version 1.0.0
  */
 
 namespace MadeByAura\WPTools;
@@ -19,16 +17,12 @@ class Component {
 	/**
 	 * Path of the component file relative to the `$directory`.
 	 *
-	 * @since 2.0.0
-	 *
 	 * @var string Path of the component file relative to the `$directory`.
 	 */
 	protected $slug;
 
 	/**
 	 * Data to be passed into the component file.
-	 *
-	 * @since 2.0.0
 	 *
 	 * @var mixed $props.
 	 */
@@ -37,8 +31,6 @@ class Component {
 	/**
 	 * Absolute path of the component file.
 	 *
-	 * @since 2.0.0
-	 *
 	 * @var string $path.
 	 */
 	protected $path;
@@ -46,16 +38,12 @@ class Component {
 	/**
 	 * Relative path of the directory that contains components.
 	 *
-	 * @since 2.0.0
-	 *
 	 * @var string $directory.
 	 */
 	protected static $directory;
 
 	/**
 	 * Constructor.
-	 *
-	 * @since 2.0.0
 	 *
 	 * @param string $slug  - Path of the component file relative to the `$directory`.
 	 * @param mixed  $props - Data to be passed into the component file.
@@ -67,8 +55,6 @@ class Component {
 
 	/**
 	 * Set class properties.
-	 *
-	 * @since 2.0.0
 	 *
 	 * @param  string $slug  - Template slug.
 	 * @param  array  $props - Data to be passed into the component file.
@@ -88,8 +74,6 @@ class Component {
 
 	/**
 	 * Set absolute path of the component file.
-	 *
-	 * @since 2.0.0
 	 *
 	 * @return void
 	 */
@@ -115,8 +99,6 @@ class Component {
 	/**
 	 * Checks if the component is enabled.
 	 *
-	 * @since 2.0.0
-	 *
 	 * @return bool
 	 */
 	public function is_enabled() {
@@ -131,8 +113,6 @@ class Component {
 
 	/**
 	 * Includes the component file and passes data into it.
-	 *
-	 * @since 2.0.0
 	 *
 	 * @return void
 	 */

@@ -4,8 +4,6 @@
  *
  * @package MadeByAura\WPTools
  * @author  MadeByAura.com
- * @since   2.1.0
- * @version 1.0.1
  */
 
 namespace MadeByAura\WPTools;
@@ -18,8 +16,6 @@ defined( 'ABSPATH' ) || die();
 class Markup {
 	/**
 	 * Print HTML attributes.
-	 *
-	 * @since 2.1.0
 	 *
 	 * @param array $attrs - Array of HTML attributes.
 	 * @return string $output - String of HTML attributes and values.
@@ -62,8 +58,6 @@ class Markup {
 	/**
 	 * Parse HTML style attribute.
 	 *
-	 * @since 2.1.0
-	 *
 	 * @param string|array $properties - CSS properties.
 	 * @return string
 	 */
@@ -98,8 +92,6 @@ class Markup {
 	/**
 	 * Escape name of the attribute.
 	 *
-	 * @since 2.1.0
-	 *
 	 * @param string $attribute - Tag attribute.
 	 */
 	public static function esc_attr_name( $attribute ) {
@@ -108,8 +100,6 @@ class Markup {
 
 	/**
 	 * Get name of the function that should sanitize the given attribute.
-	 *
-	 * @since 2.1.0
 	 *
 	 * @param string $attribute - Tag attribute.
 	 * @return string $function - Name of the function that should to sanitize.
@@ -131,8 +121,6 @@ class Markup {
 
 	/**
 	 * Build list of classes into a string.
-	 *
-	 * @since 2.1.0
 	 *
 	 * @param array $classes - Array of CSS classes.
 	 * @return string $classes - String of classes separated by the space character.
@@ -161,8 +149,6 @@ class Markup {
 	/**
 	 * Get an array from a space separated string of CSS classes.
 	 *
-	 * @since 2.2.0
-	 *
 	 * @param array|string $classes - String or array of CSS classes.
 	 * @return array
 	 */
@@ -177,8 +163,6 @@ class Markup {
 
 	/**
 	 * Merge classes.
-	 *
-	 * @since 2.2.0
 	 *
 	 * @param array|string $classes_1 - String or array of CSS classes.
 	 * @param array|string $classes_2 - String or array of CSS classes.
@@ -198,8 +182,6 @@ class Markup {
 	/**
 	 * Print class attribute value.
 	 *
-	 * @since 2.1.0
-	 *
 	 * @param  array $classes - Array of CSS classes.
 	 * @return void
 	 */
@@ -215,8 +197,6 @@ class Markup {
 	/**
 	 * Print class attribute.
 	 *
-	 * @since 2.1.0
-	 *
 	 * @param  array $classes - Array of CSS classes.
 	 * @return void
 	 */
@@ -231,8 +211,6 @@ class Markup {
 
 	/**
 	 * Conditionally print target="_blank" attribute.
-	 *
-	 * @since 2.1.0
 	 *
 	 * @param  bool $condition - Flag indicating whether to print the attribute or not.
 	 * @return void
