@@ -1,4 +1,10 @@
-## 2.2.0 (TBD)
+## 2.3.0
+
+- Add breadcumbs.
+- Add intelephense support.
+- Remove @since and @version from docblocks.
+
+## 2.2.0
 
 - Add `get_classes_array` and `merge_classes` methods to `Markup` class.
 - Use `array_replace_recursive` instead of custom `merge_arrays`.
