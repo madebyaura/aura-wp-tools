@@ -25,4 +25,14 @@ class Render {
 		$instance = new Component( $slug, $props );
 		$instance->render();
 	}
+
+	/**
+	 * Creates a new instance of `Breadcrumbs` class and invokes `render()` method.
+	 *
+	 * @return void
+	 */
+	public static function breadcrumbs() {
+		$instance = new Breadcrumbs();
+		$instance->render();
+	}
 }
