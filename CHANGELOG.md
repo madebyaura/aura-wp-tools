@@ -1,3 +1,7 @@
+## 2.4.0
+
+- Remove Component class.
+
 ## 2.3.0
 
 - Add breadcumbs.
