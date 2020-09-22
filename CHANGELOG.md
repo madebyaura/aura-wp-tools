@@ -1,4 +1,8 @@
-## 2.4.0
+## 3.0.1
+
+- Fix links in breadcrumbs.
+
+## 3.0.0
 
 - Remove Component class.
 

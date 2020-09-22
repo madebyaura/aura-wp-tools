@@ -37,18 +37,18 @@ class Breadcrumbs {
 	 */
 	public function render() {
 		$crumbs = $this->crumbs;
-		$size   = count( $crumbs ) - 1;
+		$last   = count( $crumbs ) - 1;
 		?>
 			<div class="aura-breadcrumbs">
 				<?php foreach ( $crumbs as $index => $crumb ) : ?>
 					<div class="aura-breadcrumbs__item">
-						<?php if ( $index === $size ) : ?>
+						<?php if ( $index !== $last ) : ?>
 							<a class="aura-breadcrumbs__item-link" href="<?php echo esc_url( $crumb['url'] ); ?>">
 						<?php endif; ?>
 
 						<?php echo esc_html( $crumb['text'] ); ?>
 
-						<?php if ( $index === $size ) : ?>
+						<?php if ( $index !== $last ) : ?>
 							</a><!-- .aura-breadcrumbs__item-link -->
 						<?php endif; ?>
 					</div><!-- .aura-breadcrumbs__item -->
