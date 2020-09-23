@@ -1,3 +1,7 @@
+## 3.1.0
+
+- Add ACF class.
+
 ## 3.0.1
 
 - Fix links in breadcrumbs.
