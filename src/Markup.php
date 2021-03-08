@@ -84,6 +84,39 @@ class Markup {
 	}
 
 	/**
+	 * Merge explicit HTML attributes into default attributes.
+	 *
+	 * @param array $default  - Default HTML attributes.
+	 * @param array $explicit - Explicit HTML attributes.
+	 * @return array
+	 */
+	public static function merge_attrs( $default, $explicit ) {
+		$attrs   = [];
+		$classes = [];
+
+		// If the class attribute exits in the default as well explicit attributes,
+		// merge and save them into a variable.
+		if ( ! empty( $default['class'] ) && ! empty( $explicit['class'] ) ) {
+			// Merge attributes.
+			$classes = self::merge_classes( $explicit['class'], $default['class'] );
+
+			// Remove the class attribute from both default and expilict attributes.
+			unset( $default['class'] );
+			unset( $explicit['class'] );
+		}
+
+		// Merge attributes.
+		$attrs = array_replace_recursive( $default, $explicit );
+
+		// If there are classes, add them into the attributes.
+		if ( $classes ) {
+			$attrs['class'] = $classes;
+		}
+
+		return $attrs;
+	}
+
+	/**
 	 * Parse HTML style attribute.
 	 *
 	 * @param string|array $properties - CSS properties.
