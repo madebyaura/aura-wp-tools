@@ -26,6 +26,9 @@ class Markup {
 			return '';
 		}
 
+		// Sort attributes.
+		$attrs = self::sort_attrs( $attrs );
+
 		// Cycle through attributes, build tag attribute string.
 		foreach ( $attrs as $key => $value ) {
 			// Skip if the attribute has no value.
@@ -53,6 +56,31 @@ class Markup {
 				echo sprintf( '%s="%s" ', self::esc_attr_name( $key ), call_user_func( self::get_attr_esc_function( $key ), $value ) );
 			}
 		}
+	}
+
+	/**
+	 * Sort HTML attributes.
+	 *
+	 * @param array $attrs - Array of HTML attributes.
+	 * @return array
+	 */
+	public static function sort_attrs( $attrs ) {
+		// Move `href` to the begenning of the attrs.
+		if ( ! empty( $attrs['href'] ) ) {
+			$attrs = [ 'href' => $attrs['href'] ] + $attrs;
+		}
+
+		// Move `class` to the begenning of the attrs.
+		if ( ! empty( $attrs['class'] ) ) {
+			$attrs = [ 'class' => $attrs['class'] ] + $attrs;
+		}
+
+		// Move `id` to the begenning of the attrs.
+		if ( ! empty( $attrs['id'] ) ) {
+			$attrs = [ 'id' => $attrs['id'] ] + $attrs;
+		}
+
+		return $attrs;
 	}
 
 	/**
