@@ -17,8 +17,8 @@ class Markup {
 	/**
 	 * Print HTML attributes.
 	 *
-	 * @param array $attrs - Array of HTML attributes.
-	 * @return string $output - String of HTML attributes and values.
+	 * @param array $attrs  Array of HTML attributes.
+	 * @return string $output  String of HTML attributes and values.
 	 */
 	public static function echo_attrs( $attrs ) {
 		// Don't proceed if there are no attributes.
@@ -61,7 +61,7 @@ class Markup {
 	/**
 	 * Sort HTML attributes.
 	 *
-	 * @param array $attrs - Array of HTML attributes.
+	 * @param array $attrs  Array of HTML attributes.
 	 * @return array
 	 */
 	public static function sort_attrs( $attrs ) {
@@ -86,8 +86,8 @@ class Markup {
 	/**
 	 * Merge explicit HTML attributes into default attributes.
 	 *
-	 * @param array $default  - Default HTML attributes.
-	 * @param array $explicit - Explicit HTML attributes.
+	 * @param array $default   Default HTML attributes.
+	 * @param array $explicit  Explicit HTML attributes.
 	 * @return array
 	 */
 	public static function merge_attrs( $default, $explicit ) {
@@ -119,7 +119,7 @@ class Markup {
 	/**
 	 * Parse HTML style attribute.
 	 *
-	 * @param string|array $properties - CSS properties.
+	 * @param string|array $properties  CSS properties.
 	 * @return string
 	 */
 	public static function parse_style_attr( $properties ) {
@@ -153,7 +153,7 @@ class Markup {
 	/**
 	 * Escape name of the attribute.
 	 *
-	 * @param string $attribute - Tag attribute.
+	 * @param string $attribute  Tag attribute.
 	 */
 	public static function esc_attr_name( $attribute ) {
 		return preg_replace( '/[^a-zA-Z0-9-]/', '', $attribute );
@@ -162,8 +162,8 @@ class Markup {
 	/**
 	 * Get name of the function that should sanitize the given attribute.
 	 *
-	 * @param string $attribute - Tag attribute.
-	 * @return string $function - Name of the function that should to sanitize.
+	 * @param string $attribute  Tag attribute.
+	 * @return string $function  Name of the function that should to sanitize.
 	 */
 	public static function get_attr_esc_function( $attribute ) {
 		switch ( $attribute ) {
@@ -183,8 +183,8 @@ class Markup {
 	/**
 	 * Build list of classes into a string.
 	 *
-	 * @param array $classes - Array of CSS classes.
-	 * @return string $classes - String of classes separated by the space character.
+	 * @param array $classes  Array of CSS classes.
+	 * @return string $classes  String of classes separated by the space character.
 	 */
 	public static function parse_classes( $classes = [] ) {
 		// Do not proceed if classes is empty.
@@ -210,7 +210,7 @@ class Markup {
 	/**
 	 * Get an array from a space separated string of CSS classes.
 	 *
-	 * @param array|string $classes - String or array of CSS classes.
+	 * @param array|string $classes  String or array of CSS classes.
 	 * @return array
 	 */
 	public static function get_classes_array( $classes ) {
@@ -225,8 +225,8 @@ class Markup {
 	/**
 	 * Merge classes.
 	 *
-	 * @param array|string $classes_1 - String or array of CSS classes.
-	 * @param array|string $classes_2 - String or array of CSS classes.
+	 * @param array|string $classes_1  String or array of CSS classes.
+	 * @param array|string $classes_2  String or array of CSS classes.
 	 * @return array
 	 */
 	public static function merge_classes( $classes_1, $classes_2 ) {
@@ -243,7 +243,7 @@ class Markup {
 	/**
 	 * Print class attribute value.
 	 *
-	 * @param  array $classes - Array of CSS classes.
+	 * @param  array $classes  Array of CSS classes.
 	 * @return void
 	 */
 	public static function echo_classes( $classes = [] ) {
@@ -258,7 +258,7 @@ class Markup {
 	/**
 	 * Print class attribute.
 	 *
-	 * @param  array $classes - Array of CSS classes.
+	 * @param  array $classes  Array of CSS classes.
 	 * @return void
 	 */
 	public static function echo_class_attr( $classes = [] ) {
@@ -273,7 +273,7 @@ class Markup {
 	/**
 	 * Conditionally print target="_blank" attribute.
 	 *
-	 * @param  bool $condition - Flag indicating whether to print the attribute or not.
+	 * @param  bool $condition  Flag indicating whether to print the attribute or not.
 	 * @return void
 	 */
 	public static function echo_target_attr( $condition ) {

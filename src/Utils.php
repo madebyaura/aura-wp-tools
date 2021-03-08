@@ -18,7 +18,7 @@ class Utils {
 	 * Remove invalid characters from a string, and replace underscores,
 	 * whitespace, forward slash, and back slash characters with dashes.
 	 *
-	 * @param  string $string - String that needs to dashified.
+	 * @param  string $string  String that needs to dashified.
 	 * @return string $string
 	 */
 	public static function dashify( $string ) {
@@ -39,7 +39,7 @@ class Utils {
 	/**
 	 * Run all elements of an array through dashify().
 	 *
-	 * @param  array $array - Array to be dashified.
+	 * @param  array $array  Array to be dashified.
 	 * @return array
 	 */
 	public static function dashify_array( $array ) {
@@ -50,7 +50,7 @@ class Utils {
 	 * Remove invalid characters from a string, and replace dash, whitespace,
 	 * forward slash, and back slash characters with underscores.
 	 *
-	 * @param  string $string - String that needs to be underscorified.
+	 * @param  string $string  String that needs to be underscorified.
 	 * @return string $string
 	 */
 	public static function underscorify( $string ) {
@@ -71,7 +71,7 @@ class Utils {
 	/**
 	 * Run all elements of an array through underscorify().
 	 *
-	 * @param  array $array - Array to be underscorify.
+	 * @param  array $array  Array to be underscorify.
 	 * @return array
 	 */
 	public static function underscorify_array( $array ) {
@@ -81,7 +81,7 @@ class Utils {
 	/**
 	 * Get file content.
 	 *
-	 * @param  string $file_path - File path.
+	 * @param  string $file_path  File path.
 	 * @return string
 	 */
 	public static function get_file_content( $file_path ) {
@@ -99,8 +99,8 @@ class Utils {
 	/**
 	 * Remove prefix from a string.
 	 *
-	 * @param  string $string - String.
-	 * @param  string $prefix - Prefix to be removed.
+	 * @param  string $string  String.
+	 * @param  string $prefix  Prefix to be removed.
 	 * @return string
 	 */
 	public static function remove_prefix( $string, $prefix ) {
@@ -110,8 +110,8 @@ class Utils {
 	/**
 	 * Remove prefix from a array keys.
 	 *
-	 * @param  array  $array  - Associative array.
-	 * @param  string $prefix - Prefix to be removed.
+	 * @param  array  $array   Associative array.
+	 * @param  string $prefix  Prefix to be removed.
 	 * @return array
 	 */
 	public static function remove_array_key_prefix( $array, $prefix ) {
@@ -127,7 +127,7 @@ class Utils {
 	/**
 	 * Check if a plugin is active.
 	 *
-	 * @param  string $plugin - Base plugin path.
+	 * @param  string $plugin  Base plugin path.
 	 * @return bool
 	 */
 	public static function is_plugin_active( $plugin ) {
@@ -141,8 +141,8 @@ class Utils {
 	/**
 	 * Get URL of the image.
 	 *
-	 * @param  integer $image_id   - Image ID.
-	 * @param  string  $image_size - Image size.
+	 * @param  integer $image_id    Image ID.
+	 * @param  string  $image_size  Image size.
 	 * @return integer|string
 	 */
 	public static function get_image_url( $image_id, $image_size = 'thumbnail' ) {
@@ -156,7 +156,7 @@ class Utils {
 	/**
 	 * Process post query arguments.
 	 *
-	 * @param  array $args - Query arguments.
+	 * @param  array $args  Query arguments.
 	 * @return array
 	 */
 	public static function parse_query_args( $args ) {
@@ -235,8 +235,8 @@ class Utils {
 	/**
 	 * Get widget's css class name using it PHP class name.
 	 *
-	 * @param  string $class_name - Widget class name.
-	 * @return string $class_name - CSS class name.
+	 * @param  string $class_name  Widget class name.
+	 * @return string $class_name  CSS class name.
 	 */
 	public static function get_widget_css_class( $class_name ) {
 		// Early exit if class name is empty.
@@ -261,8 +261,8 @@ class Utils {
 	 *
 	 * @link https://docs.woocommerce.com/document/conditional-tags/
 	 *
-	 * @param  string|array $page - Page or pages.
-	 * @param  string|array $args - Page arguments.
+	 * @param  string|array $page  Page or pages.
+	 * @param  string|array $args  Page arguments.
 	 * @return bool
 	 */
 	public static function is_wc_page( $page = '', $args = '' ) {
