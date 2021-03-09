@@ -192,6 +192,11 @@ class Markup {
 			return '';
 		}
 
+		// If $classes is a string, convert it into an array.
+		if ( is_string( $classes ) ) {
+			$classes = explode( ' ', $classes );
+		}
+
 		// Pass each array element through trim().
 		$classes = array_map( 'trim', $classes );
 

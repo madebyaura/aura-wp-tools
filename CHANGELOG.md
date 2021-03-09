@@ -2,6 +2,7 @@
 
 - Add `sort_attrs` method in `Markup` class.
 - Add `merge_attrs` method in `Markup` class.
+- Fix `parse_classes` method in `Markup` class.
 
 ## 3.1.0
 
