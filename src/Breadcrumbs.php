@@ -17,7 +17,7 @@ class Breadcrumbs {
 	/**
 	 * Breadcrumbs.
 	 *
-	 * @var array Breadcrumbs.
+	 * @var array  Breadcrumbs.
 	 */
 	protected $crumbs = [];
 

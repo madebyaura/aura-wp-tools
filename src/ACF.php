@@ -7,8 +7,6 @@
  *
  * @package MadeByAura\WPTools
  * @author  MadeByAura.com
- * @since   1.0.0
- * @version 1.0.0
  */
 
 namespace MadeByAura\WPTools;
