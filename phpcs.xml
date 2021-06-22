@@ -34,11 +34,11 @@
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
 		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
-		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
 	</rule>
 
-	<!-- Require short array syntax -->
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+	<!-- Disallow long array syntax. -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found" />
 
 	<!-- Verify that the text_domain is set to the desired text-domain.
 		 Multiple valid text domains can be provided as a comma-delimited list. -->
@@ -53,6 +53,13 @@
 	<rule ref="WordPress.Files.FileName">
 		<properties>
 			<property name="is_theme" value="true" />
+		</properties>
+	</rule>
+
+	<!-- Allow forward slash in hook names. -->
+	<rule ref="WordPress.NamingConventions.ValidHookName">
+		<properties>
+			<property name="additionalWordDelimiters" value="/-" />
 		</properties>
 	</rule>
 
