@@ -24,17 +24,18 @@
 
 	<!-- Include the WordPress ruleset, with exclusions. -->
 	<rule ref="WordPress">
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+		<exclude name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed" />
 		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
 		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
-		<exclude name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed" />
 		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
 		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
 		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
 		<exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+		<exclude name="WordPress.PHP.DisallowShortTernary.Found" />
 		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
-		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
 	</rule>
 
 	<!-- Disallow long array syntax. -->
@@ -73,6 +74,6 @@
 	</rule>
 
 	<!-- Include sniffs for PHP cross-version compatibility. -->
-	<config name="testVersion" value="5.6"/>
+	<config name="testVersion" value="7.0"/>
 	<rule ref="PHPCompatibility"/>
 </ruleset>
