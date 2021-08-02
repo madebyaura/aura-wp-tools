@@ -1,3 +1,7 @@
+## 3.3.0
+
+- Add option to add custom CSS class in breadcrumbs.
+
 ## 3.2.0
 
 - Add `sort_attrs` method in `Markup` class.
