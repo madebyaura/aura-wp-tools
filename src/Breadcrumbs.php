@@ -23,8 +23,6 @@ class Breadcrumbs {
 
 	/**
 	 * Constructor.
-	 *
-	 * @return void
 	 */
 	public function __construct() {
 		$this->set_crumbs();
@@ -32,8 +30,6 @@ class Breadcrumbs {
 
 	/**
 	 * Render crumbs.
-	 *
-	 * @return void
 	 */
 	public function render() {
 		$crumbs = $this->crumbs;
@@ -59,8 +55,6 @@ class Breadcrumbs {
 
 	/**
 	 * Set crumbs.
-	 *
-	 * @return void
 	 */
 	protected function set_crumbs() {
 		if ( is_front_page() ) {
@@ -96,8 +90,6 @@ class Breadcrumbs {
 
 	/**
 	 * Add home.
-	 *
-	 * @return void
 	 */
 	protected function add_home() {
 		$text = __( 'Home', 'aura-wp-tools' );
@@ -111,8 +103,6 @@ class Breadcrumbs {
 
 	/**
 	 * Add post.
-	 *
-	 * @return void
 	 */
 	protected function add_post() {
 		$this->crumbs[] = [
@@ -123,8 +113,6 @@ class Breadcrumbs {
 
 	/**
 	 * Add post ancestors.
-	 *
-	 * @return void
 	 */
 	protected function add_post_ancestors() {
 		$post      = get_queried_object();
@@ -146,8 +134,6 @@ class Breadcrumbs {
 
 	/**
 	 * Add post page.
-	 *
-	 * @return void
 	 */
 	protected function add_posts_page() {
 		if ( 'page' === get_option( 'show_on_front' ) ) {
@@ -165,8 +151,6 @@ class Breadcrumbs {
 
 	/**
 	 * Add term.
-	 *
-	 * @return void
 	 */
 	protected function add_term() {
 		$term = get_queried_object();
@@ -179,8 +163,6 @@ class Breadcrumbs {
 
 	/**
 	 * Add term ancestors.
-	 *
-	 * @return void
 	 */
 	protected function add_term_ancestors() {
 		$term      = get_queried_object();

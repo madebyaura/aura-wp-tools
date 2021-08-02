@@ -248,8 +248,7 @@ class Markup {
 	/**
 	 * Print class attribute value.
 	 *
-	 * @param  array $classes  Array of CSS classes.
-	 * @return void
+	 * @param array $classes  Array of CSS classes.
 	 */
 	public static function echo_classes( $classes = [] ) {
 		// Do not proceed if classes is empty.
@@ -263,8 +262,7 @@ class Markup {
 	/**
 	 * Print class attribute.
 	 *
-	 * @param  array $classes  Array of CSS classes.
-	 * @return void
+	 * @param array $classes  Array of CSS classes.
 	 */
 	public static function echo_class_attr( $classes = [] ) {
 		// Do not proceed if classes is empty.
@@ -278,8 +276,7 @@ class Markup {
 	/**
 	 * Conditionally print target="_blank" attribute.
 	 *
-	 * @param  bool $condition  Flag indicating whether to print the attribute or not.
-	 * @return void
+	 * @param bool $condition  Flag indicating whether to print the attribute or not.
 	 */
 	public static function echo_target_attr( $condition ) {
 		if ( $condition ) {

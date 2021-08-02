@@ -16,8 +16,6 @@ defined( 'ABSPATH' ) || die();
 class Render {
 	/**
 	 * Creates a new instance of `Breadcrumbs` class and invokes `render()` method.
-	 *
-	 * @return void
 	 */
 	public static function breadcrumbs() {
 		$instance = new Breadcrumbs();
