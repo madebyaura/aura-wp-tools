@@ -15,6 +15,13 @@ defined( 'ABSPATH' ) || die();
  */
 class Breadcrumbs {
 	/**
+	 * Arguments.
+	 *
+	 * @var array  Arguments.
+	 */
+	protected $args = [];
+
+	/**
 	 * Breadcrumbs.
 	 *
 	 * @var array  Breadcrumbs.
@@ -23,8 +30,14 @@ class Breadcrumbs {
 
 	/**
 	 * Constructor.
+	 *
+	 * @param array $args  Arguments.
 	 */
-	public function __construct() {
+	public function __construct( $args = [] ) {
+		$this->args = array_replace_recursive( [
+			'class' => '',
+		], $args );
+
 		$this->set_crumbs();
 	}
 
@@ -34,8 +47,12 @@ class Breadcrumbs {
 	public function render() {
 		$crumbs = $this->crumbs;
 		$last   = count( $crumbs ) - 1;
+
+		// Classes.
+		$classes[] = $this->args['class'];
+		$classes[] = 'aura-breadcrumbs';
 		?>
-			<div class="aura-breadcrumbs">
+			<div class="<?php Markup::echo_classes( $classes ); ?>">
 				<?php foreach ( $crumbs as $index => $crumb ) : ?>
 					<div class="aura-breadcrumbs__item">
 						<?php if ( $index !== $last ) : ?>
