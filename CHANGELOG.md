@@ -1,3 +1,7 @@
+## 3.4.0
+
+- Add `Singleton` class.
+
 ## 3.3.0
 
 - Add option to add custom CSS class in breadcrumbs.
