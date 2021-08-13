@@ -42,18 +42,27 @@ class Breadcrumbs {
 	}
 
 	/**
+	 * Have posts.
+	 *
+	 * @access public
+	 * @return bool
+	 */
+	public function have_crumbs() {
+		return 2 <= count( $this->crumbs ) ? true : false;
+	}
+
+	/**
 	 * Render crumbs.
 	 */
 	public function render() {
-		$crumbs = $this->crumbs;
-		$last   = count( $crumbs ) - 1;
+		$last = count( $this->crumbs ) - 1;
 
 		// Classes.
 		$classes[] = $this->args['class'];
 		$classes[] = 'aura-breadcrumbs';
 		?>
 			<div class="<?php Markup::echo_classes( $classes ); ?>">
-				<?php foreach ( $crumbs as $index => $crumb ) : ?>
+				<?php foreach ( $this->crumbs as $index => $crumb ) : ?>
 					<div class="aura-breadcrumbs__item">
 						<?php if ( $index !== $last ) : ?>
 							<a class="aura-breadcrumbs__item-link" href="<?php echo esc_url( $crumb['url'] ); ?>">

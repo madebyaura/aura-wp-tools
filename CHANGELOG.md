@@ -1,3 +1,7 @@
+## 3.5.0 (Unreleased)
+
+- Add `have_crumbs` method in `Breadcumbs` class.
+
 ## 3.4.0
 
 - Add `Singleton` class.
