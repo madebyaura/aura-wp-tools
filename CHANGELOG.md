@@ -1,5 +1,6 @@
-## 3.5.0 (Unreleased)
+## 4.0.0 (Unreleased)
 
+- Remove `Render` class.
 - Add `have_crumbs` method in `Breadcumbs` class.
 
 ## 3.4.0
