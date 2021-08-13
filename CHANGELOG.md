@@ -1,4 +1,4 @@
-## 4.0.0 (Unreleased)
+## 4.0.0
 
 - Remove `Render` class.
 - Add `have_crumbs` method in `Breadcumbs` class.
